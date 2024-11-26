@@ -1,0 +1,55 @@
+name : Enviar correo Practica 2 
+on:
+  push:
+    branches:
+      - main 
+      - feature_a 
+      - feature_b 
+jobs:
+  send-email_main:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar correo electrónico de ticpractica2.421@gmail.com a ticpractica2.421@gmail.com
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ticpractica2.421@gmail.com
+          password: slns xgtq ccwu zfsk
+          from: <ticpractica2.421@gmail.com>
+          to: ticpractica2.421@gmail.com
+          subject: Cambios subidos a rama main
+          body: main a sufrido de algunos cambios 
+
+  send-email_feature_a:
+    if: github.ref == 'refs/heads/feature_a'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar correo electrónico de ticpractica2.421@gmail.com a ticpractica2.421@gmail.com
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ticpractica2.421@gmail.com
+          password: slns xgtq ccwu zfsk
+          from: <ticpractica2.421@gmail.com>
+          to: ticpractica2.421@gmail.com
+          subject: Cambios subidos a rama feature_a
+          body: feature_a a sufrido de algunos cambios 
+  send-email_feature_b:
+    if: github.ref == 'refs/heads/feature_b'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar correo electrónico de ticpractica2.421@gmail.com a ticpractica2.421@gmail.com
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ticpractica2.421@gmail.com
+          password: slns xgtq ccwu zfsk
+          from: <ticpractica2.421@gmail.com>
+          to: ticpractica2.421@gmail.com
+          subject: Cambios subidos a rama feature_b
+          body: feature_b a sufrido de algunos cambios 
+
