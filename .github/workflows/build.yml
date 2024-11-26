@@ -1,4 +1,4 @@
-name : Enviar correo Practica 2 
+name : Enviar correo Practica_2 
 on:
   push:
     branches:
