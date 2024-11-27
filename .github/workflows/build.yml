@@ -1,4 +1,4 @@
-name : Enviar correo Practica_2 
+name : Enviar correo Practica 2 
 on:
   push:
     branches:
@@ -19,7 +19,7 @@ jobs:
           password: slns xgtq ccwu zfsk
           from: <ticpractica2.421@gmail.com>
           to: ticpractica2.421@gmail.com
-          subject: Cambios subidos a rama main
+          subject: Cambios subidos a rama main 
           body: main a sufrido de algunos cambios 
 
   send-email_feature_a:
